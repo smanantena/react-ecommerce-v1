@@ -1,0 +1,258 @@
+@charset 'utf-8';
+
+.card {
+    /* background-color: #fce565; */
+    min-width: 150px;
+    /* max-width: 300px; */
+    min-height: 300px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+}
+
+.card-in-cart {
+    /* background-color: #fce565; */
+    min-width: 150px;
+    /* max-width: 300px; */
+    min-height: 300px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    border: solid transparent;
+}
+
+.want-to-delete-item {
+    
+    border-radius: 15px;
+    animation: red-background-color 2s ease-out 0s infinite;
+}
+
+@keyframes red-background-color {
+    0% {
+        background-color: transparent;
+    }
+    30% {
+        background-color: transparent;
+        border: solid red;
+    }
+    31% {
+        background-color: red;
+        border: solid red;
+    }
+    35% {
+        background-color: transparent;
+        border: solid red;
+    }
+    36% {
+        background-color: red;
+    }
+    80% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.card-product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all ease-in-out 1s;
+    padding-top: 1.3rem;
+}
+
+.card:hover .card-product-image {
+    object-fit: contain;
+    padding-top: 0;
+}
+
+.card-product-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+.card-product-title {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 300px;
+    height: calc(3.5rem);
+    overflow: hidden;
+}
+
+.card-product-delete-button {
+    color: rgba(244, 0, 0, .3);
+    position: absolute;
+    font-size: 2rem;
+    top: 10%;
+    left: 80%;
+    z-index: 2;
+}
+
+.card-product-delete-button:hover {
+    color: rgba(244, 0, 0, 1);
+}
+
+.num-item {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary--color);
+    /* min-width: fit-content; */
+    text-align: center;
+    border: none;
+    width: 80%;
+    max-width: 100px;
+    display: inline-block;
+    transition: all ease-out .2s;
+    overflow-x: auto;
+    cursor: text;
+}
+
+.num-item:hover {
+    background-color: var(--primary--color);
+    color: black;
+    border-radius: 15px;
+}
+
+.btn-cart {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--secondary--color);
+    color: white;
+    border-radius: 50px;
+    padding: 0;
+    width: .4rem;
+}
+
+.card-product-title-cart {
+    color: #969696;
+    font-size: 1.1rem;
+}
+
+.card-product-price-cart {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.btn-container-cart {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 3rem;
+    width: 20rem;
+}
+
+.total-price-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+    align-items: center;
+    height: 9rem;
+}
+
+.total-price-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.total-price-title::after {
+    content: ' :';
+}
+
+.total-price-paragraph {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary--color);
+}
+
+.total-price-main-section {
+    background-color: #ebebeb;
+}
+
+.total-price-items-number-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.total-price-items-number-title::after {
+    content: ' :';
+}
+
+.total-price-items-number-number {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.total-price-section {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    border-right: solid #cacaca;
+    padding-right: 4rem;
+
+}
+
+.total-price-section-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .4rem;
+    align-items: center;
+    border-right: solid #cacaca;
+    padding-right: 4rem;
+}
+
+.total-price-icon {
+    font-size: 4rem;
+    color: #cacaca;
+}
+
+.btn-card {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-card:last-child {
+    margin-top: .5rem;
+}
+
+.card .btn-add-to-card {
+    opacity: 0;
+    transition: all ease-in 1s;
+}
+
+.card:hover .btn-add-to-card:hover {
+    animation-play-state: paused;
+}
+
+.card:hover .btn-add-to-card {
+    opacity: 1;
+    animation: addToCard 1s ease-out 0s infinite normal;
+}
+
+@keyframes addToCard {
+    0% {
+        box-shadow: 0px -5px 6px #dba800;
+        border-top: solid 5px transparent;
+    }
+
+
+}
